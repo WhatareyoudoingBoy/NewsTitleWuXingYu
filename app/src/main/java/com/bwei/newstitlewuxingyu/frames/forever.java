@@ -11,7 +11,8 @@ import android.view.ViewGroup;
 import com.bwei.newstitlewuxingyu.R;
 
 
-public class Forever extends Fragment {
+ 
+ public class Forever extends Fragment {
     
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";

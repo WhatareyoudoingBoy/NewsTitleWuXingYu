@@ -1,6 +1,7 @@
 package com.bwei.newstitlewuxingyu.frames;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
@@ -11,7 +12,8 @@ import android.view.ViewGroup;
 import com.bwei.newstitlewuxingyu.R;
 
 
-public class Login extends Fragment {
+ 
+ public class Login extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";

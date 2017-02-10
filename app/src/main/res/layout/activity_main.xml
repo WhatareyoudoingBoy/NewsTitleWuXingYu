@@ -15,10 +15,12 @@
         android:layout_alignParentBottom="true"
         android:id="@+id/main_rg"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:weightSum="4">
         <RadioButton
+            android:checked="true"
+            android:drawableTop="@drawable/home_btn"
             android:gravity="center"
             android:layout_gravity="center"
             android:button="@null"
@@ -26,8 +28,12 @@
             android:id="@+id/main_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
+            android:textSize="8sp"
+            android:textColor="@drawable/home_textcolor"
             android:text="@string/shouye"/>
         <RadioButton
+            android:textSize="8sp"
+            android:drawableTop="@drawable/vedio_btn"
             android:gravity="center"
             android:layout_gravity="center"
             android:button="@null"
@@ -35,8 +41,11 @@
             android:id="@+id/main_video"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@drawable/home_textcolor"
             android:text="@string/vedio"/>
         <RadioButton
+            android:textSize="8sp"
+            android:drawableTop="@drawable/forever_btn"
             android:gravity="center"
             android:layout_gravity="center"
             android:button="@null"
@@ -44,8 +53,11 @@
             android:id="@+id/main_forever"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@drawable/home_textcolor"
             android:text="@string/forever"/>
         <RadioButton
+            android:textSize="8sp"
+            android:drawableTop="@drawable/login_btn"
             android:gravity="center"
             android:layout_gravity="center"
             android:button="@null"
@@ -53,6 +65,7 @@
             android:id="@+id/main_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@drawable/home_textcolor"
             android:text="@string/login"/>
     </RadioGroup>
 </RelativeLayout>
