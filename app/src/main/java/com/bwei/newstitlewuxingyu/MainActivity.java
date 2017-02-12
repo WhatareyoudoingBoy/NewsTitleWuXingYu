@@ -12,7 +12,7 @@ import com.bwei.newstitlewuxingyu.frames.Login;
 import com.bwei.newstitlewuxingyu.frames.Video;
 
 public class MainActivity extends AppCompatActivity {
-FrameLayout main_frame;
+    FrameLayout main_frame;
     RadioGroup main_rg;
     RadioButton main_home;
     RadioButton main_video;

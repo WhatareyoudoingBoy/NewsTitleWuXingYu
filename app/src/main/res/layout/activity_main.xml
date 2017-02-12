@@ -33,6 +33,7 @@
             android:textSize="10sp"
             android:textColor="@drawable/home_textcolor"
             android:text="@string/shouye"/>
+
         <RadioButton
             android:textSize="10sp"
             android:drawableTop="@drawable/vedio_btn"
@@ -45,6 +46,7 @@
             android:layout_height="wrap_content"
             android:textColor="@drawable/home_textcolor"
             android:text="@string/vedio"/>
+
         <RadioButton
             android:textSize="10sp"
             android:drawableTop="@drawable/forever_btn"
