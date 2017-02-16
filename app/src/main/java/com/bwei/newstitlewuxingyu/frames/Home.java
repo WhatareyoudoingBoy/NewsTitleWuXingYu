@@ -3,26 +3,24 @@ package com.bwei.newstitlewuxingyu.frames;
 
 import android.os.Bundle;
 
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.bwei.newstitlewuxingyu.HomeVpAdapter;
+import com.bwei.newstitlewuxingyu.adapter.HomeVpAdapter;
 import com.bwei.newstitlewuxingyu.R;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *    Home 主页的布局设计 及 数据导入
+ *
+ */
 
 public class Home extends Fragment {
    
@@ -70,15 +68,20 @@ public class Home extends Fragment {
     @Override
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        
+        //不布局中的控件
         home_tablayout = (TabLayout) view.findViewById(R.id.home_tablayout);
         home_viewpager = (ViewPager) view.findViewById(R.id.home_viewpager);
 
-        initList();        
+
+        initList();//根据TabLayout布局中的Title 数量的多少 添加Frament
+
+
         // ViewPager Adapter
         HomeVpAdapter adapter = new HomeVpAdapter(getActivity().getSupportFragmentManager(),this,Tabtitle);
-         adapter.setList(list);
+        adapter.setList(list);
         home_viewpager.setAdapter(adapter);
+
+
         //根据Tabtitle数组的索引，将值写入到 TabLayout中，
         home_tablayout.addTab(home_tablayout.newTab().setText(Tabtitle[0]));
         home_tablayout.addTab(home_tablayout.newTab().setText(Tabtitle[1]));
@@ -98,6 +101,7 @@ public class Home extends Fragment {
         list = new ArrayList<>();
         for (int i=0;i<Tabtitle.length;i++){
 
+             //vp_frament 布局中设置数据 及 布局
             vp_frament frament = new vp_frament();   
             list.add(frament);
 

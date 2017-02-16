@@ -1,11 +1,13 @@
-package com.bwei.newstitlewuxingyu;
+package com.bwei.newstitlewuxingyu.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.bwei.newstitlewuxingyu.R;
 import com.bwei.newstitlewuxingyu.frames.Forever;
 import com.bwei.newstitlewuxingyu.frames.Home;
 import com.bwei.newstitlewuxingyu.frames.Login;
@@ -18,18 +20,22 @@ public class MainActivity extends AppCompatActivity {
     RadioButton main_video;
     RadioButton main_forever;
     RadioButton main_login;
+    private Home home;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
         initView(); //优化控件
-        
+        // 设置为默认页面
+       home =  new Home();
+//
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, home).commit();
+
         onclickRadioButton(); //RadioButton点击事件
         
-        // 设置为默认页面
-        Home home = new Home();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,home).commit();
+
        
     }
     
@@ -50,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
                     case R.id.main_home:
-                        Home home = new Home();
+                        home =  new Home();
+
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,home).commit();
+
                         break;
                     case R.id.main_forever:
                         Forever forever = new Forever();

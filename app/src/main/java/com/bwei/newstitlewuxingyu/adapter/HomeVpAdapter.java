@@ -1,19 +1,28 @@
-package com.bwei.newstitlewuxingyu;
+package com.bwei.newstitlewuxingyu.adapter;
 
-import android.content.Context;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 
+import com.bwei.newstitlewuxingyu.R;
 import com.bwei.newstitlewuxingyu.frames.Home;
 import com.bwei.newstitlewuxingyu.frames.vp_frament;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
+
 /**
- * Created by hp on 2017/2/12.
+ * 将Frament添加到 ViewPager的Adapter中。
  */
+
 
 public class HomeVpAdapter extends FragmentPagerAdapter {
 
@@ -35,7 +44,7 @@ public class HomeVpAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return vp_frament.newInstance(title[position],tabtitle[position]);
+        return vp_frament.newInstance(title[position],null);
     }
 
     @Override
@@ -47,4 +56,6 @@ public class HomeVpAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         return tabtitle[position];
     }
+
+
 }

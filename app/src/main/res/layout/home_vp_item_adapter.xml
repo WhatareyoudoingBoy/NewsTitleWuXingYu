@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:id="@+id/home_vp_item_adapter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:padding="8dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+        <LinearLayout
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp">
+        <ImageView
+
+            android:id="@+id/home_vp_item_adapter_image_1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="4dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="100dp">
+        <ImageView
+
+            android:id="@+id/home_vp_item_adapter_image_2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            />
+            </LinearLayout>
+        <LinearLayout
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="100dp">
+        <ImageView
+
+            android:id="@+id/home_vp_item_adapter_image_3"
+
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            />
+            </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+    <TextView
+
+        android:id="@+id/home_vp_item_adapter_laiyuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="10dp"
+        android:textColor="@color/laiyuan"
+        />
+
+        <TextView
+            android:layout_marginLeft="10sp"
+            android:layout_toRightOf="@id/home_vp_item_adapter_laiyuan"
+
+            android:id="@+id/home_vp_item_adapter_shijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="10sp"
+            android:textColor="@color/laiyuan"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
