@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     RadioButton main_forever;
     RadioButton main_login;
     private Home home;
+    private Forever forever;
+    private Video video;
+    private Login login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
        home =  new Home();
 //
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, home).commit();
-
+//        getSupportFragmentManager().beginTransaction().show(home).commit();
+//        getSupportFragmentManager().beginTransaction().hide(forever).commit();
+//        getSupportFragmentManager().beginTransaction().hide(video).commit();
+//        getSupportFragmentManager().beginTransaction().hide(login).commit();
         onclickRadioButton(); //RadioButton点击事件
         
 
@@ -56,22 +62,37 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
                     case R.id.main_home:
-                        home =  new Home();
+//                        home =  new Home();
 
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,home).commit();
-
+//                        getSupportFragmentManager().beginTransaction().show(home);
+//                        getSupportFragmentManager().beginTransaction().hide(forever);
+//                        getSupportFragmentManager().beginTransaction().hide(video);
+//                        getSupportFragmentManager().beginTransaction().hide(login);
                         break;
                     case R.id.main_forever:
-                        Forever forever = new Forever();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,forever).commit();
+                        forever = new Forever();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, forever).commit();
+//                        getSupportFragmentManager().beginTransaction().show(forever);
+//                        getSupportFragmentManager().beginTransaction().hide(home);
+//                        getSupportFragmentManager().beginTransaction().hide(video);
+//                        getSupportFragmentManager().beginTransaction().hide(login);
                         break;
                     case R.id.main_video:
-                        Video video = new Video();
+                         video = new Video();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,video).commit();
+//                        getSupportFragmentManager().beginTransaction().show(video);
+//                        getSupportFragmentManager().beginTransaction().hide(home);
+//                        getSupportFragmentManager().beginTransaction().hide(forever);
+//                        getSupportFragmentManager().beginTransaction().hide(login);
                         break;
                     case R.id.main_login:
-                        Login login = new Login();
+                         login = new Login();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,login).commit();
+//                        getSupportFragmentManager().beginTransaction().show(login);
+//                        getSupportFragmentManager().beginTransaction().hide(home);
+//                        getSupportFragmentManager().beginTransaction().hide(forever);
+//                        getSupportFragmentManager().beginTransaction().hide(video);
                         break;
                     
                 }

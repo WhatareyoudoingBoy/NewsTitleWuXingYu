@@ -5,10 +5,85 @@
     tools:context="com.bwei.newstitlewuxingyu.frames.Login">
 
     
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:background="@drawable/my_page_background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_marginLeft="70dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/account_quick_login_mobile"/>
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/account_quick_login_weibo"/>
+            <ImageView
+                android:layout_marginRight="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/account_quick_login_weixin"/>
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/drawer_item_arrow_pressed"/>
+
+        </RelativeLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <RadioButton
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/favoriteicon_profile_press"
+                android:id="@+id/login_rg_shoucang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="13sp"
+                android:text="收藏"/>
+            <RadioButton
+                android:layout_marginTop="3dp"
+                android:drawableTop="@drawable/seclect_item_history"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1.00"
+                android:button="@null"
+                android:id="@+id/login_rg_history"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="历史"
+                android:textSize="13sp"/>
+            <RadioButton
+                android:drawableTop="@drawable/nighticon_profile_press"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:id="@+id/login_rg_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="夜间"
+                android:textSize="13sp"/>
+        </RadioGroup>
+
+        </LinearLayout>
+
 
 </FrameLayout>

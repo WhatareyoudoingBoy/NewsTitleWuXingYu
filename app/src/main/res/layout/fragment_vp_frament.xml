@@ -2,10 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bwei.newstitlewuxingyu.frames.vp_frament">
+    tools:context="com.bwei.newstitlewuxingyu.frames.Vpframent">
 
     <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/vp_item_pull"
+        android:divider="@null"
+        android:dividerHeight = "0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -101,8 +101,8 @@ public class Home extends Fragment {
         list = new ArrayList<>();
         for (int i=0;i<Tabtitle.length;i++){
 
-             //vp_frament 布局中设置数据 及 布局
-            vp_frament frament = new vp_frament();   
+             //Vpframent 布局中设置数据 及 布局
+            Vpframent frament = new Vpframent();
             list.add(frament);
 
         }

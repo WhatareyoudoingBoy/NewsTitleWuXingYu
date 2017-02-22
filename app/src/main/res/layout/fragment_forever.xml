@@ -3,12 +3,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bwei.newstitlewuxingyu.frames.Forever">
-
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     
-    <TextView
-        android:layout_gravity="center"
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/meofcare"
+               android:layout_centerInParent="true"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我关注的"
+                android:textColor="@color/black"
+                 />
+
+    <ImageView
+        android:layout_toRightOf="@id/meofcare"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forever" />
+        android:src="@drawable/add_channel_titlbar_new"/>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/haoyouicon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/beauty_publish_normal"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/haoyouicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好友动态"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/addcare"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tabbar_icon_more"/>
+        <TextView
+
+            android:layout_marginTop="25dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/addcare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加更多感兴趣的内容"/>
+    </RelativeLayout>
+</LinearLayout>
 
 </FrameLayout>

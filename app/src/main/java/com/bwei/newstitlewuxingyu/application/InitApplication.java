@@ -9,7 +9,7 @@ import org.xutils.x;
  * Created by hp on 2017/2/15.
  */
 
-public class MyApplication extends Application {
+public class InitApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();

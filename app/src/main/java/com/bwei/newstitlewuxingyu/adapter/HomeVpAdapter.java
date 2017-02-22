@@ -4,17 +4,10 @@ package com.bwei.newstitlewuxingyu.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 
-import com.bwei.newstitlewuxingyu.R;
 import com.bwei.newstitlewuxingyu.frames.Home;
-import com.bwei.newstitlewuxingyu.frames.vp_frament;
-
-import org.w3c.dom.Text;
+import com.bwei.newstitlewuxingyu.frames.Vpframent;
 
 import java.util.List;
 
@@ -44,7 +37,7 @@ public class HomeVpAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return vp_frament.newInstance(title[position],null);
+        return Vpframent.newInstance(title[position],null);
     }
 
     @Override
